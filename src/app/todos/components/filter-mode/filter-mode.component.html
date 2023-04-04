@@ -1,0 +1,5 @@
+<ul class="filters">
+  <li *ngFor="let filterMode of filterModes">
+    <a href="#" (click)="changeFilterMode($event, filterMode)" [ngClass]="{ 'selected': selectedFilterMode === filterMode }">{{ filterMode }}</a>
+  </li>
+</ul>
