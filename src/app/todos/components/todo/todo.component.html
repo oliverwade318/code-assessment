@@ -1,5 +1,5 @@
 <div class="view">
-  <input class="toggle" type="checkbox" [attr.checked]="todo.completed" (change)="markAsComplete()" />
+  <input [className]="editing ? 'edit' :'toggle'" type="checkbox" [attr.checked]="todo.completed" (change)="markAsComplete()" />
   <label (dblclick)="toggleEditMode()">{{ todo.text }}</label>
   <button class="destroy" (click)="remove()"></button>
 </div>

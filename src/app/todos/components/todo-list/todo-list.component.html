@@ -1,4 +1,4 @@
 <ul class="todo-list" *ngIf="todos">
   <li appTodo #todo *ngFor="let todo of todos; let i = index;" [todo]="todo" [index]="i" (completeTodo)="onTodoCompleted($event)" (removeTodo)="onRemoveTodo($event)"></li>
 </ul>
-<p *ngIf="noMatches" class="no-matches">There are no items matching that filter</p>
+<p *ngIf="noMatches" class="no-matches">There are no {{ filterMode.toLowerCase() }} items</p>
